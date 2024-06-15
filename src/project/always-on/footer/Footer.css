@@ -1,0 +1,102 @@
+/* Footer.css */
+
+/* Main footer background and text color */
+footer {
+  background-color: #f8f9fa; /* Light gray background color */
+  color: #343a40; /* Dark text color */
+}
+
+/* Styling for the newsletter signup section */
+.form-outline {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-label {
+  position: absolute;
+  top: 0.25rem;
+  left: 1rem;
+  font-size: 0.875rem;
+  color: #6c757d;
+  pointer-events: none;
+  transition: top 0.1s ease-out, font-size 0.1s ease-out;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-control:not(:placeholder-shown) + .form-label,
+.form-control:focus + .form-label {
+  top: -0.5rem;
+  left: 1rem;
+  font-size: 0.75rem;
+  color: #007bff;
+}
+
+/* Styling for the subscribe button */
+.btn-primary {
+  color: #fff;
+  background-color: #007bff; /* Blue primary button color */
+  border-color: #007bff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker blue color on hover */
+  border-color: #0056b3;
+}
+
+/* Styling for the copyright section */
+.text-center {
+  background-color: rgba(0, 0, 0, 0.05); /* Light gray background color */
+  padding: 1rem;
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.text-center a {
+  color: #343a40; /* Dark text color for links */
+}
+
+.text-center a:hover {
+  text-decoration: none;
+  color: #007bff; /* Blue color on hover */
+}
+
+/* Additional styling for the developed by section */
+.text-center h6 {
+  font-size: 0.75rem;
+  color: #6c757d;
+  margin-top: 0.5rem;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .form-outline {
+    margin-bottom: 0.5rem;
+  }
+  
+  .btn-primary {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}

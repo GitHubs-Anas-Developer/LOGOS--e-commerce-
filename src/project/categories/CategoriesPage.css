@@ -1,0 +1,8 @@
+/* productall css code same there */
+
+.product-card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-evenly;
+}

@@ -1,0 +1,52 @@
+.about-section {
+  padding: 70px 0;
+  background-color: #f7f7f7;
+  
+}
+
+.about-logo {
+  max-width: 150px; /* Adjust size as needed */
+  margin-bottom: 20px;
+}
+
+.about-title {
+  margin-bottom: 30px;
+}
+
+.about-title h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.about-title h1 span {
+  color: #ff6347;
+}
+
+.about-title h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.about-paddingB {
+  padding-bottom: 20px;
+}
+
+.about-icons ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-icons ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.about-icons ul li a {
+  color: #333;
+}
+
+.about-img img {
+  border-radius: 2vh;
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,90 @@
+.navigationbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 10px 20px;
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8f9fa; /* Example background color */
+}
+
+.openSidebarBtn {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111; /* Sidebar background color */
+  overflow-x: hidden;
+  transition: width 0.5s; /* Smooth transition for width */
+  padding-top: 60px; /* Ensure content is below the navigation bar */
+}
+
+.sidebar.open {
+  width: 250px; /* Width when sidebar is open */
+}
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.sidebar a {
+  padding: 10px 8px 10px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.profile {
+  font-size: xx-large;
+}
+
+.searching-bar input[type="search"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 5px;
+  width: 200px; /* Adjust width as needed */
+}
+
+.searching-bar button {
+  padding: 8px 12px;
+  background-color: #007bff; /* Example button color */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.searching-bar button:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}

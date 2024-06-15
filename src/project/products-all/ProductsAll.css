@@ -1,0 +1,101 @@
+.Products-All {
+  margin-top: 10vh;
+  background-color: rgb(248, 255, 255);
+}
+.product-card {
+  margin: 1vh;
+  width: auto;
+  height: auto;
+  border-radius: 1vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.product-img {
+  margin-top: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+  height: 18vh;
+  width: auto;
+  border-radius: 1vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card-title-link {
+  text-decoration: none;
+}
+.card-name {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: medium;
+  color: rgb(8, 71, 120);
+  white-space: nowrap;
+  width: 25vh;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.btn-primary {
+  width: 100%;
+  border-radius: 1vh;
+}
+.checked {
+  color: rgb(55, 0, 255);
+}
+.card-price {
+  color: #d4288c;
+  font-weight: 900;
+}
+.productall-button {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  height: fit-content;
+  margin-top: 10px;
+}
+
+.productall-button a {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  font-size: 11px;
+  color: #111;
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 1px solid #aaa;
+  font-weight: bold;
+}
+
+.productall-button a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 0%;
+  background: #111;
+  height: 100%;
+  z-index: -1;
+  transition: width 0.3s ease-in-out;
+  transform: skew(-25deg);
+  transform-origin: right;
+}
+
+.productall-button a:hover:after {
+  width: 150%;
+  left: -10px;
+  transform-origin: left;
+}
+
+.productall-button a:hover {
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.productall-button a:nth-of-type(1) {
+  border-radius: 50px 0 0 50px;
+  border-right: none;
+}
+
+.productall-button a:nth-of-type(2) {
+  border-radius: 0px 50px 50px 0;
+}
+
+.cart-icon {
+  padding-right: 8px;
+}
