@@ -14,10 +14,10 @@ import Signup from "./project/profile/signup/Signup";
 import Login from "./project/profile/login/Login";
 import ForgotPassword from "./project/profile/forgot-password/ForgotPassword";
 import SearchingList from "./project/searching-list/SearchingList";
+import AllCategories from "./project/all-categories/AllCategories";
 
 function AppContent() {
   const [cartItems, setCartItems] = useState([]);
-  console.log("cartItems", cartItems);
 
   const handleAddToCart = (item) => {
     setCartItems([...cartItems, item]);
@@ -39,15 +39,19 @@ function AppContent() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart cartItems={cartItems} />} />
-        <Route path="/category/:slug" element={<CategoriesPage handleAddToCart={handleAddToCart}/>} />
+        <Route
+          path="/category/:slug"
+          element={<CategoriesPage handleAddToCart={handleAddToCart} />}
+        />
         <Route
           path="/product-details/:productId"
-          element={<ProductDetails handleAddToCart={handleAddToCart}/>}
+          element={<ProductDetails handleAddToCart={handleAddToCart} />}
         />
         <Route
           path="/products-all"
           element={<ProductsAll handleAddToCart={handleAddToCart} />}
         />
+        <Route path="/all-categories" element={<AllCategories />} />
         <Route path="/searching-list" element={<SearchingList />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />

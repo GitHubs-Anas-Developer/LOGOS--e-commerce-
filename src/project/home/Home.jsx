@@ -210,7 +210,7 @@ function Home() {
       <div className="row row-section-04">
         <h3 style={{ textAlign: "start" }}>Mobiles</h3>
         <div className="col-12 mobiles">
-          {mobiles.length > 0 ?  (
+          {mobiles.length > 0 ? (
             <div className="container d-flex flex-wrap align-items-center">
               {mobiles.map((mobile) => (
                 <div

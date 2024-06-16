@@ -1,90 +1,111 @@
+/* General styling for the navigation container */
+.navigation {
+  font-family: Arial, sans-serif; /* Set font family for the entire navigation */
+}
+
+/* Styling for the navigation bar */
 .navigationbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-  padding: 10px 20px;
-  z-index: 4;
+  background-color: rgb(227, 214, 223);
+  padding: 10px;
+  text-align: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #f8f9fa; /* Example background color */
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow */
 }
 
-.openSidebarBtn {
-  cursor: pointer;
+/* Row styling */
+.navigationbar .row {
+  display: flex;
+  align-items: center;
+}
+
+.navigationbar .company-name h3 {
+  margin: 0;
   font-size: 24px;
+  font-weight: bold;
+  color: #d70c0c;
 }
 
-.sidebar {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #111; /* Sidebar background color */
-  overflow-x: hidden;
-  transition: width 0.5s; /* Smooth transition for width */
-  padding-top: 60px; /* Ensure content is below the navigation bar */
+.navigationbar form {
+  display: flex;
+  align-items: center;
 }
 
-.sidebar.open {
-  width: 250px; /* Width when sidebar is open */
-}
-
-.closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-  cursor: pointer;
-}
-
-.sidebar a {
-  padding: 10px 8px 10px 16px;
-  text-decoration: none;
-  font-size: 18px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidebar a:hover {
-  color: #f1f1f1;
-}
-
-.profile {
-  font-size: xx-large;
-}
-
-.searching-bar input[type="search"] {
-  padding: 8px;
-  border: 1px solid #ccc;
+.navigationbar input[type="search"] {
+  width: 190px; 
+  padding: 8px 10px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
   border-radius: 4px;
-  margin-right: 5px;
-  width: 200px; /* Adjust width as needed */
+  height: auto;
 }
 
-.searching-bar button {
-  padding: 8px 12px;
-  background-color: #007bff; /* Example button color */
-  color: #fff;
+.navigationbar button[type="submit"] {
+  width: 90px;
+  padding: 8px ;
+  margin-left: 10px;
   border: none;
   border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
   cursor: pointer;
 }
 
-.searching-bar button:hover {
-  background-color: #0056b3; /* Darker color on hover */
+.navigationbar button[type="submit"]:hover {
+  background-color: #0056b3;
 }
 
-@media screen and (max-height: 450px) {
-  .sidebar {
-    padding-top: 15px;
-  }
-  .sidebar a {
-    font-size: 18px;
-  }
+/* Styling for the navigation bottom section */
+.navigation-bottom {
+  background-color: rgb(227, 214, 223);
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+}
+
+.navigation-bottom .row {
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-bottom .col-2,
+.navigation-bottom .col-3 {
+  padding: 5px;
+}
+
+.navigation-bottom a {
+  color: #d70c0c; /* Change link color to match the logo */
+  text-decoration: none;
+}
+
+.navigation-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Button styling */
+.home-btn,
+.product-all-btn,
+.categories-btn,
+.cart-btn,
+.account-btn {
+  font-size: x-large;
+  color: rgb(117, 35, 250);
+}
+
+/* General link styling */
+.Link {
+  text-decoration: none;
+}
+
+.Link:hover {
+  color: #d70c0c; /* Change color on hover */
+  text-decoration: none;
 }

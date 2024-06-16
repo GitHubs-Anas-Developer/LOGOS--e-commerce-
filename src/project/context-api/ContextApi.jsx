@@ -21,14 +21,15 @@ const AllProductsProvider = ({ children }) => {
   const [airpods, setAirpods] = useState([]);
   const [smartwatch, setSmartwatch] = useState([]);
   const [watch, setWatch] = useState([]);
+  const [categories, setCategories] = useState([]);
+  console.log("cate", categories);
 
   useEffect(() => {
     const fetchProducts = async (categorySlug, setter) => {
       try {
         const { data } = await commerce.products.list({
           category_slug: categorySlug,
-          limit : 100,
-         
+          limit: 100,
         });
         setter(data);
       } catch (error) {
@@ -36,6 +37,17 @@ const AllProductsProvider = ({ children }) => {
           `Error fetching ${categorySlug || "all"} products:`,
           error
         );
+      }
+    };
+
+    const fetchCategories = async () => {
+      try {
+        const { data } = await commerce.categories.list({
+          limit: 50,
+        });
+        setCategories(data);
+      } catch (error) {
+        console.error("Error fetching categories:", error);
       }
     };
 
@@ -52,6 +64,7 @@ const AllProductsProvider = ({ children }) => {
     fetchProducts("airpods", setAirpods);
     fetchProducts("smartwatch", setSmartwatch);
     fetchProducts("watch", setWatch);
+    fetchCategories();
   }, []);
 
   return (
@@ -70,6 +83,7 @@ const AllProductsProvider = ({ children }) => {
         airpods,
         smartwatch,
         watch,
+        categories,
       }}
     >
       {children}

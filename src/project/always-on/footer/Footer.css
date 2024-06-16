@@ -2,6 +2,7 @@
 
 /* Main footer background and text color */
 footer {
+  margin-bottom: 8vh;
   background-color: #f8f9fa; /* Light gray background color */
   color: #343a40; /* Dark text color */
 }
